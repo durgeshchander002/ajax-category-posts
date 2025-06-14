@@ -1,0 +1,28 @@
+jQuery(function($) {
+    $(document).on('click', '.ajax-pagination a', function(e) {
+        e.preventDefault();
+
+        var $wrapper = $(this).closest('.ajax-posts-wrapper');
+        var cat_id = $wrapper.data('cat');
+        var ppp = $wrapper.data('ppp');
+        var page = $(this).data('page') || 1;
+
+        $.ajax({
+            url: ajax_cat_posts.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'load_category_posts',
+                cat_id: cat_id,
+                paged: page,
+                ppp: ppp
+            },
+            beforeSend: function() {
+                $wrapper.addClass('loading');
+            },
+            success: function(response) {
+                $wrapper.removeClass('loading');
+                $wrapper.replaceWith(response);
+            }
+        });
+    });
+});
