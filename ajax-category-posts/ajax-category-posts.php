@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: AJAX Category Posts
-Description: Display category posts with AJAX pagination via shortcode.
+Description: Display posts from a specific WordPress category using AJAX-based pagination. Easily embeddable via a shortcode.
 Version: 1.2
 Author: Durgesh chander
 */
