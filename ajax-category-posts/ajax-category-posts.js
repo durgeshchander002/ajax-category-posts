@@ -4,7 +4,7 @@ jQuery(function($) {
 
         var $wrapper = $(this).closest('.ajax-posts-wrapper');
         var cat_id = $wrapper.data('cat');
-        var ppp = $wrapper.data('ppp');
+        var ppp_detail = $wrapper.data('ppp');
         var page = $(this).data('page') || 1;
 
         $.ajax({
@@ -14,7 +14,7 @@ jQuery(function($) {
                 action: 'load_category_posts',
                 cat_id: cat_id,
                 paged: page,
-                ppp: ppp
+                ppp: ppp_detail
             },
             beforeSend: function() {
                 $wrapper.addClass('loading');
