@@ -17,10 +17,10 @@ jQuery(function($) {
                 ppp: ppp_detail
             },
             beforeSend: function() {
-                $wrapper.addClass('loading');
+                $wrapper.addClass('loadingpost');
             },
             success: function(response) {
-                $wrapper.removeClass('loading');
+                $wrapper.removeClass('loadingpost');
                 $wrapper.replaceWith(response);
             }
         });
