@@ -112,7 +112,7 @@ class AJAX_Category_Posts_Plugin {
 
       $total_posts = max(0, $query->found_posts - $initial_offset);
       $total_pages = ceil($total_posts / $posts_per_page);
-
+// create pagination for posts
 $pagination = paginate_links([
     'total' => $total_pages,
     'current' => $paged,
