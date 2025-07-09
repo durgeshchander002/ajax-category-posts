@@ -75,7 +75,7 @@ class AJAX_Category_Posts_Plugin {
                 $img_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
                 $img_full = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 
-                echo '<div class="media">';
+                echo '<div class="media datamainpost">';
                 echo '<a href="' . get_permalink() . '" class="image-link media-ratio ar-bunyad-list" title="' . esc_attr( get_the_title() ) . '">';
                 echo '<span data-bgsrc="' . esc_url( $img_url ) . '" class="img bg-cover wp-post-image attachment-medium size-medium lazyloaded"';
                 echo ' data-bgset="' . esc_url( $img_url ) . ' 300w, ' . esc_url( $img_full ) . ' 1024w"';
@@ -85,7 +85,7 @@ class AJAX_Category_Posts_Plugin {
                 echo '</div>';
             }
             else{
-                echo '<div class="media">';
+                echo '<div class="media datamainpost">';
                 echo '<a href="' . get_permalink() . '" class="image-link media-ratio ar-bunyad-list" title="' . esc_attr( get_the_title() ) . '">';
                 echo '<span class="img bg-cover wp-post-image attachment-medium size-medium lazyloaded"';
                 echo ' style="background-image: url();"></span>';
