@@ -149,6 +149,7 @@ if ( $pagination ) {
         wp_reset_postdata();
     }
 
+    // ajax of pagination
     public function handle_ajax() {
         $cat_id = intval( $_POST['cat_id'] ?? 0 );
         $paged = intval( $_POST['paged'] ?? 1 );
