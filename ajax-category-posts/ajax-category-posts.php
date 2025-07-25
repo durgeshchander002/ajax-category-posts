@@ -67,7 +67,7 @@ class AJAX_Category_Posts_Plugin {
        
 
         if ( $query->have_posts() ) {
-            echo '<div class="block-content ajax-posts-wrapper" data-cat="' . esc_attr($cat_id) . '" data-ppp="' . esc_attr($ppp) . '">';
+            echo '<div class="block-content ajax-posts-wrapper latestposstdata" data-cat="' . esc_attr($cat_id) . '" data-ppp="' . esc_attr($ppp) . '">';
             echo '<div class="loop loop-list loop-sep  grid grid-1 md:grid-1 sm:grid-1 post-list">';
             while ( $query->have_posts() ) : $query->the_post();
                 echo '<div class="l-post list-post grid-on-sm m-pos-left ajax-post">';
