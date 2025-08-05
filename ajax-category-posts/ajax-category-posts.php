@@ -42,7 +42,7 @@ class AJAX_Category_Posts_Plugin {
         }
 
         $cat = get_category_by_slug( $atts['category'] );
-        if ( ! $cat ) return '<p>Invalid or missing category slug.</p>';
+        if ( ! $cat ) return '<p>Invalid or missing category.</p>';
 
         $paged = 1;
         ob_start();
@@ -92,7 +92,7 @@ class AJAX_Category_Posts_Plugin {
                 echo '</a>';
                 echo '</div>';
             }
-                $categories = get_the_category(); //function to get specific category
+                $categories = get_the_category(); //function to get categories
     
                 echo '<div class="content"><div class="post-meta post-meta-a has-below"><h3 class="is-title post-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
                echo '<div class="post-meta-items meta-below">';
